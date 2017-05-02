@@ -636,4 +636,10 @@ public void getTitlePositive(String text) {
 		Assert.fail("Title is not erased");
 	}
 }
+
+public void clickOK_01() throws InterruptedException {
+	Thread.sleep(3000);
+	driver.findElement(By.xpath("//input[@value='OK']")).click();
+	Thread.sleep(3000);
+}
 }

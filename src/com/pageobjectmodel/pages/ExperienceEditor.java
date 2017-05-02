@@ -151,7 +151,7 @@ WebElement m=driver.findElement(By.xpath("//section[@class='sc-dialogContent-mai
 	 		
 	 String src =m
 				.findElement(
-						By.xpath("(//div[div[@class='sc-iconList-item-title'][span[text()='cover']]])[1]/a/img"))
+						By.xpath("(//div[div[@class='sc-iconList-item-title'][span[text()='"+txt+"']]])["+imgindex+"]/a/img"))
 				.getAttribute("src").toString();
 		return src;
 }
@@ -179,6 +179,8 @@ public void chooseDestinationOption(String opt ) throws InterruptedException{
 }
 public void editHighlightheading(int cnt,String txt){
 	int m=cnt*2;
+	 driver.findElement(By.xpath("(//div[@class='caption']/h2)["+cnt+"]")).click();
+
 	WebElement v1=	driver.findElement(By.xpath("(//h2/span)["+m+"]"));
 	System.out.println("found v1");
 
@@ -201,7 +203,7 @@ public void editHighlightDesc(int i,String txt){
 	System.out.println("double click");
 
 	v2.sendKeys("");
-	System.out.println("clear image");
+	System.out.println("clear desc");
 
 	v2.sendKeys(txt);
 

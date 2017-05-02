@@ -22,13 +22,13 @@ public class ApachePOIMethods {
 		String date2 = date.toString().replace(" ", "").replace(":", "-");
 		return date2;
 	}
-	//sysout
+	
 	public String getServerFiles() {
 		return "C:\\RFWF_FRAMEWORK\\RFWF\\ServerFiles\\chromedriver.exe";
 	}
 	
 	public String screentShots() {
-		return "C:->Users->RFWF_FRAMEWORK->RFWF->RFWF_SCREENSHOTS->";
+		return "C:->Users->RFWF_FRAMEWORK->RFWF->RFWF_SCREENSHOTS->";// S And S
 	}
 	
 	public String getSheet_1() {

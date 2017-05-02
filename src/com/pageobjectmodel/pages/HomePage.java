@@ -130,5 +130,11 @@ public class HomePage extends BasePage {
 		driver.findElement(By.xpath("(//*[@class='scContentControl'])[" + index + "]")).sendKeys(name);
 	}
 	
-	
+//princy 26th april 2017
+	public void BrowseRedirectionLink(String txt){
+		//SetTheUserActivateUrl:
+		driver.findElement(By.xpath(".//td[div[text()='"+txt+"']]//a[text()='Browse']")).click();
+
+	}
+
 }

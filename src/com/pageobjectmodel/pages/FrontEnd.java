@@ -500,5 +500,13 @@ public void verifyInputText1(String id,String val){
 	}
 
 }
+public void verifynavigationButtons() throws InterruptedException {
+	List<WebElement> v = driver.findElements(By.xpath("//button[@class='slick-next slick-arrow']"));
+	List<WebElement> v1 = driver.findElements(By.xpath("//button[@class='slick-prev slick-arrow']"));
+	
+	if ((v.size() == 0)||(v1.size()==0)) {
+		Assert.fail("Button unavailable");
+	}
+}
 
 }

@@ -298,6 +298,18 @@ public void clickOnTenant_01() throws InterruptedException {
 	driver.findElement(By.xpath("(//div[a[span[text()='Home']]]//img[@class='scContentTreeNodeGlyph'])[2]")).click();
 	Thread.sleep(5000);
 }
+
+public void clickOnTenant_01(String tenantName) throws InterruptedException {
+	WebDriverWait wt = new WebDriverWait(driver, 50);
+	Thread.sleep(5000);
+	System.out.println(tenantName);
+	wt.until(ExpectedConditions.elementToBeClickable(By.xpath(
+			"//div[a[span[text()='"+tenantName+"']]]//img[contains(@class,'scContentTreeNodeGlyph')]")));
+	driver.findElement(By
+			.xpath("//div[a[span[text()='"+tenantName+"']]]//img[contains(@class,'scContentTreeNodeGlyph')]"))
+			.click();
+	Thread.sleep(5000);
+}
 	}
 
 

@@ -108,7 +108,7 @@ public class PageLayout extends BasePage {
 	}
 	//princy 30 march
 public void clickAddComponent(){
-	driver.findElement(By.xpath("(//img[@alt='Add a new component.'])")).click();
+	driver.findElement(By.xpath("(//img[@alt='Add a new component.'])[1]")).click();
 	
 }
 public void clickAddHere(int index){
